@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget{
             Text("This is a Text Widget", style: TextStyle(fontSize: 19, fontFamily: 'times new roman')),
             Divider(height: 20, thickness: 2,),
 
-            Text("ICON Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            Text("Icon Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
             Center(child: Icon(Icons.star, color: Colors.red, size: 45,)),
             Divider(height: 20, thickness: 2,),
 
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget{
             Image.network("https://asifahamed.com/images/test.png", height: 250, fit: BoxFit.cover),
             Divider(height: 25,thickness: 2,),
 
-            Text("ROW Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            Text("Row Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget{
             Icon(Icons.star, size: 50),
             Divider(height: 25,thickness: 2),
 
-            Text("Container widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            Text("Container Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
             Center(
               child: Container(
                 alignment: Alignment.center, height: 150, width: 150,
