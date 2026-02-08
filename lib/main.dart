@@ -98,9 +98,92 @@ class HomePage extends StatelessWidget{
               ],
             ),
             Divider(thickness: 2, height: 25,),
+
+            Text("Wrap Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            Wrap(
+              spacing: 20, runSpacing: 5,
+              children: List.generate(8, (index)=> Chip(label: Text('Item $index'))),
+            ),
+            Divider(thickness: 2, height: 25,),
+
+            Text("Button's Widget", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(onPressed: (){},
+                    child: Text('ElevatedButton'), style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber, foregroundColor: Colors.white,
+                        padding: EdgeInsets.all(20),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40)
+                        )
+                    ),),
+                  SizedBox(width: 5),
+
+                  TextButton(onPressed: (){},
+                    child: Text('TextButton'), style: TextButton.styleFrom(
+                        backgroundColor: Colors.red, foregroundColor: Colors.white,
+                        padding: EdgeInsets.all(20),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)
+                        )
+                    ),),
+                  SizedBox(width: 5),
+
+                  OutlinedButton(onPressed: (){},
+                    child: Text('Outlined Button'), style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.black, foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        )
+                    ),),
+                  SizedBox(width: 5),
+                  
+                  IconButton(onPressed: (){}, icon: Icon(Icons.home), style: IconButton.styleFrom(
+                    backgroundColor: Colors.amber, foregroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    )
+                  ),),
+                  SizedBox(width: 5),
+
+                  IconButton(onPressed: (){}, icon: Icon(Icons.car_crash), style: IconButton.styleFrom(
+                      backgroundColor: Colors.red, foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)
+                      )
+                  ),),
+                ],
+              ),
+            ),
+            Divider(thickness: 2, height: 25,),
+
+            Text("DropDown Button", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            DropdownButton(
+              items: [
+              DropdownMenuItem(value: "Asif", child: Text("Asif"),),
+              DropdownMenuItem(value: "Riya", child: Text("Riya"),),
+              DropdownMenuItem(value: "Ayaz", child: Text("Ayaz"),),
+              DropdownMenuItem(value: "Joty", child: Text("Joty"),),
+            ], onChanged: (value){},
+            ),
+            Divider(thickness: 2, height: 25,),
+
+            Text("Check Box", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            Checkbox(value: true, onChanged: (value){}),
+            Divider(thickness: 2, height: 25,),
+
+            Text("Slider", style: TextStyle(fontSize: 25, fontFamily: 'Courier',fontWeight: FontWeight.bold)),
+            Slider(value: 0.5, onChanged: (value){}),
+            Divider(thickness: 2, height: 25,),
+
+
           ],
         ),
       ),
+
     );
   }
 
